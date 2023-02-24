@@ -44,7 +44,7 @@ main(){
 	cout<<"o modelo escolhido terá quantas portas?\n\n";
 	cin>> porta;
 	
-	if(porta>4){
+	if(porta>=4){
 		gasolina = gasolina - 0.5;
 		alcool = alcool - 0.5;	
 	}
