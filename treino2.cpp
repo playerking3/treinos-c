@@ -14,7 +14,7 @@ main(){
 	system("cls");
 	
 	float valor;
-	int tamanho, sabor, recheio, adc;
+	int tamanho, sabor, recheio, adc, entrega;
 	
 	do{
 		cout<<"Insira o tamanho do Ovo:\n1-Pequeno\n2-Médio\n3-Grande\n\n";
@@ -83,6 +83,7 @@ main(){
 			case 2: valor+=5.43;
 			break;
 			case 3: valor+=10.10;
+			break;
 			default: cout<<"Valor invalido, tente novamente\n\n";
 			system("pause");
 			system("cls");
@@ -90,4 +91,9 @@ main(){
 	}while(adc<0 or adc>3);
 	
 	system("cls");
+	
+	do{
+		cout<<"Insira os as opções eddicionais de entrega desejados:\n1-embalado para presente\n2-Entrega em domicilio\n3-ambos\n4-Nenhum.\n\n";
+		cin>>entrega;
+	}while(entrega<0 or entrega >4);
 }
