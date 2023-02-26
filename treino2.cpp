@@ -14,7 +14,7 @@ main(){
 	system("cls");
 	
 	float valor;
-	int tamanho, sabor, recheio, adc, entrega;
+	int tamanho, sabor, recheio, adc, entrega, quantidade, pagamento;
 	
 	do{
 		cout<<"Insira o tamanho do Ovo:\n1-Pequeno\n2-Médio\n3-Grande\n\n";
@@ -95,5 +95,56 @@ main(){
 	do{
 		cout<<"Insira os as opções eddicionais de entrega desejados:\n1-embalado para presente\n2-Entrega em domicilio\n3-ambos\n4-Nenhum.\n\n";
 		cin>>entrega;
+		
+		switch(entrega){
+			case 1: valor+=2.50;
+			break;
+			case 2: valor+=5.00;
+			break;
+			case 3: valor+=7.50;
+			break;
+			case 4: break;
+			default: cout<<"Valor invalido, tente novamente\n\n";
+			system("pause");
+			system("cls");
+		}
 	}while(entrega<0 or entrega >4);
+	
+	system("cls");
+	
+	do{
+	
+		cout<<"Insira a quantidade de ovos para encomenda: ";
+		cin>> quantidade;
+		
+		if(quantidade<0){
+			cout<<"Valor inválido, tente novamente\n\n";
+			system("pause");
+			system("cls");
+		}else{
+			valor *= quantidade;
+			break;
+		}
+		
+		
+	}while(quantidade<0);
+	
+	system("cls");
+	do{
+		cout<<"insira a forma de pagamento:\n1-Cartão de crédito\n2-Dinheiro/pix\n\n";
+		cin>> pagamento;
+		
+		switch(pagamento){
+			case 1: valor+=3.30;
+			break;
+			case 2: valor *= 0.9;
+			break;
+			default: cout<<"Valor invalido, tente novamente\n\n";
+			system("pause");
+			system("cls");
+		}
+	}while(pagamento<0 or pagamento >2);
+	system("cls");
+	
+	cout<<"O preço do ovo de pascoa é: R$"<<valor;
 }
