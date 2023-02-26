@@ -74,7 +74,7 @@ main(){
  	system("cls");
 
 	do{
-		cout<<"Insira Os adicionais desejados:\n1-Kit-Kat\n2-MM's\n3-Ambos\n\n";
+		cout<<"Insira Os adicionais desejados:\n1-Kit-Kat\n2-MM's\n3-Ambos\n4-Nenhum\n\n";
 		cin>>adc;
 		
 		switch(adc){
@@ -84,11 +84,12 @@ main(){
 			break;
 			case 3: valor+=10.10;
 			break;
+			case 4: break;
 			default: cout<<"Valor invalido, tente novamente\n\n";
 			system("pause");
 			system("cls");
 		}
-	}while(adc<0 or adc>3);
+	}while(adc<0 or adc>4);
 	
 	system("cls");
 	
